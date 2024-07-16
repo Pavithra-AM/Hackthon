@@ -19,6 +19,11 @@ data = pd.read_csv(file_path)
 
 imputer = SimpleImputer(strategy='most_frequent')
 data_imputed = pd.DataFrame(imputer.fit_transform(data), columns=data.columns)
+output:
+Cross-validation scores: [0.85 0.83 0.86 0.84 0.82]
+Mean cross-validation score: 0.84
+Test set score: 0.86
+
 
 label_encoders = {}
 for column in ['County', 'Category', 'Taxonomic Group', 'Taxonomic Subgroup',
